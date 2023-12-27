@@ -145,48 +145,16 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>ST-LINKIII-KEIL_SWO</Key>
-          <Name>-U07003800040000524A51544E -O2254 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("ARM CoreSight SW-DP") -D00(0BC11477) -L00(0) -TO131090 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC1000 -FN1 -FF0STM32G0xx_128.FLM -FS08000000 -FL020000 -FP0($$Device:STM32G070RBTx$CMSIS\Flash\STM32G0xx_128.FLM)</Name>
+          <Name>-U07003800040000524A51544E -O2254 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("ARM CoreSight SW-DP (ARM Core") -D00(0BC11477) -L00(0) -TO131090 -TC10000000 -TT10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC1000 -FN1 -FF0STM32G0xx_128.FLM -FS08000000 -FL020000 -FP0($$Device:STM32G070RBTx$CMSIS\Flash\STM32G0xx_128.FLM)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint>
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>26</LineNumber>
+          <LineNumber>112</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134220538</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Game\Snake\Src\game_snake.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OLED\../Game/Snake/Src/game_snake.c\26</Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>24</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134220530</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Game\Snake\Src\game_snake.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OLED\../Game/Snake/Src/game_snake.c\24</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>13</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134220202</Address>
+          <Address>134219234</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -195,55 +163,29 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\Hardware\DS18B20\Src\ds18b20.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\OLED\../Hardware/DS18B20/Src/ds18b20.c\13</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>5</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134220154</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Hardware\DS18B20\Src\ds18b20.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OLED\../Hardware/DS18B20/Src/ds18b20.c\5</Expression>
+          <Expression>\\OLED\../Hardware/DS18B20/Src/ds18b20.c\112</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>item_current</ItemText>
+          <ItemText>temp</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>snake-&gt;snack.y</ItemText>
+          <ItemText>rec_data</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>GetTime.Seconds</ItemText>
+          <ItemText>Ds18b20_Temp_m</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>snake-&gt;points[i].y</ItemText>
-        </Ww>
-        <Ww>
-          <count>4</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>snake-&gt;points[0].x</ItemText>
-        </Ww>
-        <Ww>
-          <count>5</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>snake-&gt;points[0]</ItemText>
+          <ItemText>Ds18b20_Temp_l</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -320,7 +262,7 @@
 
   <Group>
     <GroupName>Application/User/Core</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1328,7 +1270,7 @@
 
   <Group>
     <GroupName>Hardware/DS18B20</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

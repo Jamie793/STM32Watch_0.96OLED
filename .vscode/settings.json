@@ -23,7 +23,8 @@
         "stm32g0xx_hal_rtc.h": "c",
         "stm32g0xx_hal_conf.h": "c",
         "ui_bitmap.h": "c",
-        "ds18b20.h": "c"
+        "ds18b20.h": "c",
+        "new": "c"
     },
     "files.encoding": "gb2312"
 }

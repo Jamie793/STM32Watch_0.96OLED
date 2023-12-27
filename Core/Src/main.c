@@ -120,6 +120,7 @@ int main(void)
 
 	while (1)
 	{
+
 		UI_Update();
 		// u8g2_ClearBuffer(&u8g2);
 		UI_EventCallback();
@@ -189,9 +190,10 @@ void SystemClock_Config(void)
 void Delay_Us(unsigned long i)
 {
 	unsigned long j;
-	for(i;i>0;i--)
+	for (i; i > 0; i--)
 	{
-			for(j=27;j>0;j--);
+		for (j = 27; j > 0; j--)
+			;
 	}
 }
 /* USER CODE END 4 */

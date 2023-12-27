@@ -9,6 +9,7 @@
 #include "main.h"
 #include "rtc.h"
 #include "string.h"
+#include "ds18b20.h"
 
 // #define MENU_STYLE_NORAL
 #define MENU_STYLE_IMG

@@ -31,7 +31,7 @@ void UI_Snake_Update(void)
     else if (game_snake.game_status == 1)
     {
         Game_Snake_Update(&game_snake);
-        for (size_t i = 0; i < game_snake.length; i++)
+        for (uint8_t i = 0; i < game_snake.length; i++)
         {
             u8g2_DrawBox(&u8g2, game_snake.points[i].x, game_snake.points[i].y, 6, 6);
         }

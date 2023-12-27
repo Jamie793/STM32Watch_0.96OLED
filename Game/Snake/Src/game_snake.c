@@ -30,7 +30,7 @@ void Game_Snake_Update(Game_Snake *snake)
     else if (snake->points[0].y >= 64)
         snake->points[0].y = 13;
 
-    for (size_t i = 1; i < snake->length; i++)
+    for (uint8_t i = 1; i < snake->length; i++)
     {
         snake->points[i].last_x = snake->points[i].x;
         snake->points[i].last_y = snake->points[i].y;
@@ -39,7 +39,7 @@ void Game_Snake_Update(Game_Snake *snake)
         snake->points[i].y = snake->points[i - 1].last_y;
     }
 
-    for (size_t i = 0; i < snake->length; i++)
+    for (uint8_t i = 0; i < snake->length; i++)
     {
         if (i < 5)
             continue;

@@ -1,10 +1,10 @@
 oled\u8g2_d_setup.o: ..\Hardware\U8G2\u8g2_d_setup.c
 oled\u8g2_d_setup.o: ..\Hardware\U8G2\u8g2.h
 oled\u8g2_d_setup.o: ..\Hardware\U8G2\u8x8.h
-oled\u8g2_d_setup.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-oled\u8g2_d_setup.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-oled\u8g2_d_setup.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-oled\u8g2_d_setup.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+oled\u8g2_d_setup.o: E:\2-InstalledSoftware\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+oled\u8g2_d_setup.o: E:\2-InstalledSoftware\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+oled\u8g2_d_setup.o: E:\2-InstalledSoftware\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+oled\u8g2_d_setup.o: E:\2-InstalledSoftware\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
 oled\u8g2_d_setup.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h
 oled\u8g2_d_setup.o: ../Core/Inc/stm32g0xx_hal_conf.h
 oled\u8g2_d_setup.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h

@@ -7,7 +7,7 @@ oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h
 oled\ds18b20.o: ../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h
 oled\ds18b20.o: ../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g070xx.h
 oled\ds18b20.o: ../Drivers/CMSIS/Include/core_cm0plus.h
-oled\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+oled\ds18b20.o: E:\2-InstalledSoftware\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 oled\ds18b20.o: ../Drivers/CMSIS/Include/cmsis_version.h
 oled\ds18b20.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 oled\ds18b20.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -15,7 +15,7 @@ oled\ds18b20.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 oled\ds18b20.o: ../Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h
 oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h
 oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-oled\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+oled\ds18b20.o: E:\2-InstalledSoftware\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h
 oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h
 oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h
@@ -35,6 +35,6 @@ oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h
 oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h
 oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc.h
 oled\ds18b20.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc_ex.h
-oled\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+oled\ds18b20.o: E:\2-InstalledSoftware\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 oled\ds18b20.o: ../Core/Inc/rtc.h
 oled\ds18b20.o: ../Core/Inc/main.h

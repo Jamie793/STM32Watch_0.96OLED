@@ -119,7 +119,8 @@ void UI_Main_Update(void)
     {
         u8g2_SetBitmapMode(&u8g2, 0);
         u8g2_DrawXBMP(&u8g2, 128 / 2 - 15, 15, 30, 30, bitmap_menu_snake[item_current]);
-        sprintf(led_str, "Temp: %.2f¡æ", RTC_Time.Hours, RTC_Time.Minutes, RTC_Time.Seconds);
+        Ds18b20_GetTemperture();
+        sprintf(led_str, "Temp: %02d.%02d\0", Ds18b20_Temp_m, Ds18b20_Temp_l);
         u8g2_DrawStr(&u8g2, 128 / 2 - strlen(led_str) * 6 / 2, 60, led_str);
     }
     else
