@@ -1,0 +1,19 @@
+#include "ds18b20.h"
+
+void Ds18b20_Init(void)
+{
+    HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin, GPIO_PIN_SET);
+    Delay_Us(10);
+
+    HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin, GPIO_PIN_RESET);
+    Delay_Us(500);
+
+    HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin, GPIO_PIN_SET);
+
+    if (HAL_GPIO_ReadPin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin) == GPIO_PIN_RESET)
+    {
+        HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin, GPIO_PIN_SET);
+    }
+}
+
+

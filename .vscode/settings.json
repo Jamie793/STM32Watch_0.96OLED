@@ -1,0 +1,29 @@
+{
+    "files.associations": {
+        "adc.h": "c",
+        "gpio.h": "c",
+        "main.h": "c",
+        "string.h": "c",
+        "joystick.h": "c",
+        "stm32g0xx_hal.h": "c",
+        "oledfont.h": "c",
+        "oled.h": "c",
+        "snake.h": "c",
+        "ui.h": "c",
+        "ssd1306_conf.h": "c",
+        "dma.h": "c",
+        "ssd1306.h": "c",
+        "time.h": "c",
+        "u8g2.h": "c",
+        "stdlib.h": "c",
+        "ui_main.h": "c",
+        "ui_snake.h": "c",
+        "game_snake.h": "c",
+        "rtc.h": "c",
+        "stm32g0xx_hal_rtc.h": "c",
+        "stm32g0xx_hal_conf.h": "c",
+        "ui_bitmap.h": "c",
+        "ds18b20.h": "c"
+    },
+    "files.encoding": "gb2312"
+}
