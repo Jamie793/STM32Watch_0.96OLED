@@ -24,7 +24,8 @@
         "stm32g0xx_hal_conf.h": "c",
         "ui_bitmap.h": "c",
         "ds18b20.h": "c",
-        "new": "c"
+        "new": "c",
+        "dht11.h": "c"
     },
     "files.encoding": "gb2312"
 }

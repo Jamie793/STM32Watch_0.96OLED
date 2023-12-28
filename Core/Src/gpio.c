@@ -57,11 +57,17 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(JOYSTICK_BTN_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PtPin */
+  /*Configure GPIO pin : DS18B20 */
   GPIO_InitStruct.Pin = DS18B20_DAT_GPIO_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(DS18B20_DAT_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : DHT11 */
+  GPIO_InitStruct.Pin = DHT11_GPIO_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(DHT11_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB12 PB13 PB14 PB15 */
   GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15;

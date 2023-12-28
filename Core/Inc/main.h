@@ -70,6 +70,9 @@ void Delay_Us(unsigned long us);
 #define DS18B20_DAT_GPIO_Port GPIOA
 #define DS18B20_DAT_GPIO_Pin GPIO_PIN_0
 
+#define DHT11_GPIO_Port GPIOB
+#define DHT11_GPIO_Pin GPIO_PIN_9
+
 /* USER CODE BEGIN Private defines */
 extern char led_str[100];
 extern RTC_TimeTypeDef RTC_Time; 

@@ -10,13 +10,13 @@
       <TargetName>OLED</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060750::V5.06 update 6 (build 750)::.\ARMCC</pCCUsed>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32G070RBTx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32G0xx_DFP.1.2.0</PackID>
+          <PackID>Keil.STM32G0xx_DFP.1.4.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x20008FFF) IROM(0x8000000-0x801FFFF)  CLOCK(8000000) CPUTYPE("Cortex-M0+") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -185,7 +185,6 @@
             <uocXRam>0</uocXRam>
             <RvdsVP>0</RvdsVP>
             <RvdsMve>0</RvdsMve>
-            <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -339,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32G070xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32G0xx_HAL_Driver/Inc;../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32G0xx/Include;../Drivers/CMSIS/Include;../Hardware/OLED/Inc;../Hardware/Joystick/Inc;..\Hardware\UI\Inc;..\Hardware\U8G2;..\Game\Snake\Inc;..\Hardware\DS18B20\Inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32G0xx_HAL_Driver/Inc;../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32G0xx/Include;../Drivers/CMSIS/Include;../Hardware/OLED/Inc;../Hardware/Joystick/Inc;..\Hardware\UI\Inc;..\Hardware\U8G2;..\Game\Snake\Inc;..\Hardware\DS18B20\Inc;..\Hardware\DHT11\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -352,7 +351,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <ClangAsOpt>4</ClangAsOpt>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -562,7 +561,7 @@
                 <NoWarn>2</NoWarn>
                 <uSurpInc>2</uSurpInc>
                 <useXO>2</useXO>
-                <ClangAsOpt>0</ClangAsOpt>
+                <uClangAs>2</uClangAs>
                 <VariousControls>
                   <MiscControls></MiscControls>
                   <Define></Define>
@@ -1710,7 +1709,7 @@
                 <NoWarn>2</NoWarn>
                 <uSurpInc>2</uSurpInc>
                 <useXO>2</useXO>
-                <ClangAsOpt>0</ClangAsOpt>
+                <uClangAs>2</uClangAs>
                 <VariousControls>
                   <MiscControls></MiscControls>
                   <Define></Define>
@@ -2043,6 +2042,16 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Hardware/DHT11</GroupName>
+          <Files>
+            <File>
+              <FileName>dht11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\DHT11\Src\dht11.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
@@ -2061,20 +2070,5 @@
     </components>
     <files/>
   </RTE>
-
-  <LayerInfo>
-    <Layers>
-      <Layer>
-        <LayName>&lt;Project Info&gt;</LayName>
-        <LayDesc></LayDesc>
-        <LayUrl></LayUrl>
-        <LayKeys></LayKeys>
-        <LayCat></LayCat>
-        <LayLic></LayLic>
-        <LayTarg>0</LayTarg>
-        <LayPrjMark>1</LayPrjMark>
-      </Layer>
-    </Layers>
-  </LayerInfo>
 
 </Project>

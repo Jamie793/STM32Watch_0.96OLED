@@ -79,6 +79,7 @@
 "oled\u8x8_u16toa.o"
 "oled\game_snake.o"
 "oled\ds18b20.o"
+"oled\dht11.o"
 --library_type=microlib --strict --scatter "OLED\OLED.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

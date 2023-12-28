@@ -87,8 +87,8 @@ void UI_Main_EventCallback(void)
 
 #elif defined(MENU_STYLE_IMG)
 
-#define MENU_ITEM_MAX_COUNT 3
-const uint8_t menu_list[MENU_ITEM_MAX_COUNT][25] = {"Snake Game", "Temperture", "Cube"};
+#define MENU_ITEM_MAX_COUNT 4
+const uint8_t menu_list[MENU_ITEM_MAX_COUNT][25] = {"Snake Game", "Temperture", "Humidity", "Cube"};
 uint8_t item_current = 0;
 
 void UI_Main_Initial(void)
@@ -121,6 +121,14 @@ void UI_Main_Update(void)
         u8g2_DrawXBMP(&u8g2, 128 / 2 - 15, 15, 30, 30, bitmap_menu_snake[item_current]);
         Ds18b20_GetTemperture();
         sprintf(led_str, "Temp: %02d.%02d\0", Ds18b20_Temp_m, Ds18b20_Temp_l);
+        u8g2_DrawStr(&u8g2, 128 / 2 - strlen(led_str) * 6 / 2, 60, led_str);
+    }
+    else if (item_current == 2)
+    {
+        u8g2_SetBitmapMode(&u8g2, 0);
+        u8g2_DrawXBMP(&u8g2, 128 / 2 - 15, 15, 30, 30, bitmap_menu_snake[item_current]);
+        DHT11_GetHumidity();
+        sprintf(led_str, "Humidity: %02d.%02d\0", DHT11_Integral, DHT11_Decimal);
         u8g2_DrawStr(&u8g2, 128 / 2 - strlen(led_str) * 6 / 2, 60, led_str);
     }
     else
