@@ -122,6 +122,8 @@ int main(void)
 	MX_USART1_UART_Init();
 	/* USER CODE BEGIN 2 */
 
+	HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
+
 	Ds18b20_Init();
 	u8g2_Init(&u8g2);
 
