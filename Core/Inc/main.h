@@ -66,6 +66,8 @@ void Error_Handler(void);
 #define JOYSTICK_Y_GPIO_Port GPIOA
 #define JOYSTICK_BTN_Pin GPIO_PIN_3
 #define JOYSTICK_BTN_GPIO_Port GPIOA
+#define TEST_LED_Pin GPIO_PIN_8
+#define TEST_LED_GPIO_Port GPIOC
 #define DHT11_DAT_Pin GPIO_PIN_9
 #define DHT11_DAT_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */

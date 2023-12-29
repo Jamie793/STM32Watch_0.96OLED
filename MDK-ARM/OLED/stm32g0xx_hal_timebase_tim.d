@@ -36,3 +36,5 @@ oled\stm32g0xx_hal_timebase_tim.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx
 oled\stm32g0xx_hal_timebase_tim.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc_ex.h
 oled\stm32g0xx_hal_timebase_tim.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h
 oled\stm32g0xx_hal_timebase_tim.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h
+oled\stm32g0xx_hal_timebase_tim.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h
+oled\stm32g0xx_hal_timebase_tim.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h

@@ -2,7 +2,7 @@ oled\system_stm32g0xx.o: ../Core/Src/system_stm32g0xx.c
 oled\system_stm32g0xx.o: ../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h
 oled\system_stm32g0xx.o: ../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g070xx.h
 oled\system_stm32g0xx.o: ../Drivers/CMSIS/Include/core_cm0plus.h
-oled\system_stm32g0xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+oled\system_stm32g0xx.o: E:\2-InstalledSoftware\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 oled\system_stm32g0xx.o: ../Drivers/CMSIS/Include/cmsis_version.h
 oled\system_stm32g0xx.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 oled\system_stm32g0xx.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -14,7 +14,7 @@ oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h
 oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h
 oled\system_stm32g0xx.o: ../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h
 oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-oled\system_stm32g0xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+oled\system_stm32g0xx.o: E:\2-InstalledSoftware\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h
 oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h
 oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h
@@ -34,3 +34,7 @@ oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h
 oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h
 oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc.h
 oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc_ex.h
+oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h
+oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h
+oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h
+oled\system_stm32g0xx.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h

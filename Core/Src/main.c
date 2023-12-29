@@ -22,6 +22,7 @@
 #include "adc.h"
 #include "dma.h"
 #include "rtc.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -32,13 +33,16 @@
 #include "oled.h"
 #include "u8g2.h"
 #include "ds18b20.h"
+#include "stdio.h"
 #include "FreeRTOS.h"
 #include "task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+// extern void xPortPendSVHandler(void);
+// extern void xPortSysTickHandler(void);
+// extern void vPortSVCHandler(void);
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -75,7 +79,10 @@ void vTask_Update(void)
 {
 	for (;;)
 	{
-
+		UI_Update();
+		// u8g2_ClearBuffer(&u8g2);
+		UI_EventCallback();
+		// HAL_Delay(500);
 	}
 }
 
@@ -112,12 +119,13 @@ int main(void)
 	MX_DMA_Init();
 	MX_ADC1_Init();
 	MX_RTC_Init();
+	MX_USART1_UART_Init();
 	/* USER CODE BEGIN 2 */
 
-	// Ds18b20_Init();
-	// u8g2_Init(&u8g2);
+	Ds18b20_Init();
+	u8g2_Init(&u8g2);
 
-	// UI_Init();
+	UI_Init();
 
 	if (HAL_ADCEx_Calibration_Start(&hadc1) != HAL_OK) // 启动校准一次
 	{
@@ -127,10 +135,10 @@ int main(void)
 
 	HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&ADC_VALUE, 2);
 
-	xTaskCreate((TaskFunction_t)vTask_Update, "vTask_Update", 200, NULL, 0, NULL);
+	xTaskCreate(vTask_Update, "vTask_Update", 200, NULL, 0, NULL);
 
-	xPortStartScheduler();
-	
+	vTaskStartScheduler();
+
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
@@ -197,7 +205,8 @@ void SystemClock_Config(void)
 	}
 	/** Initializes the peripherals clocks
 	 */
-	PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC | RCC_PERIPHCLK_ADC;
+	PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC | RCC_PERIPHCLK_USART1 | RCC_PERIPHCLK_ADC;
+	PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK1;
 	PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_HSI;
 	PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
 
@@ -217,7 +226,34 @@ void Delay_Us(unsigned long i)
 			;
 	}
 }
+
+void fput(char c, FILE *f)
+{
+	// HAL_UART_Transmit(huart1, c, 0x01, 0xFF);
+}
 /* USER CODE END 4 */
+
+/**
+ * @brief  Period elapsed callback in non blocking mode
+ * @note   This function is called  when TIM7 interrupt took place, inside
+ * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+ * a global variable "uwTick" used as application time base.
+ * @param  htim : TIM handle
+ * @retval None
+ */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	/* USER CODE BEGIN Callback 0 */
+
+	/* USER CODE END Callback 0 */
+	if (htim->Instance == TIM7)
+	{
+		HAL_IncTick();
+	}
+	/* USER CODE BEGIN Callback 1 */
+
+	/* USER CODE END Callback 1 */
+}
 
 /**
  * @brief  This function is executed in case of error occurrence.
