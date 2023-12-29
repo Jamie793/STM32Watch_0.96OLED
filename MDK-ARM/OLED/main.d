@@ -49,3 +49,12 @@ oled\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
 oled\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 oled\main.o: ../Hardware/OLED/Inc/oled.h
 oled\main.o: ..\Hardware\DS18B20\Inc\ds18b20.h
+oled\main.o: ..\FreeRTOS\include\FreeRTOS.h
+oled\main.o: ..\FreeRTOS\include\FreeRTOSConfig.h
+oled\main.o: ..\FreeRTOS\include\projdefs.h
+oled\main.o: ..\FreeRTOS\include\portable.h
+oled\main.o: ..\FreeRTOS\include\deprecated_definitions.h
+oled\main.o: ..\FreeRTOS\portable\RVDS\ARM_CM0\portmacro.h
+oled\main.o: ..\FreeRTOS\include\mpu_wrappers.h
+oled\main.o: ..\FreeRTOS\include\task.h
+oled\main.o: ..\FreeRTOS\include\list.h

@@ -36,3 +36,12 @@ oled\stm32g0xx_it.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h
 oled\stm32g0xx_it.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc.h
 oled\stm32g0xx_it.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc_ex.h
 oled\stm32g0xx_it.o: ../Core/Inc/stm32g0xx_it.h
+oled\stm32g0xx_it.o: ..\FreeRTOS\include\FreeRTOS.h
+oled\stm32g0xx_it.o: ..\FreeRTOS\include\FreeRTOSConfig.h
+oled\stm32g0xx_it.o: ..\FreeRTOS\include\projdefs.h
+oled\stm32g0xx_it.o: ..\FreeRTOS\include\portable.h
+oled\stm32g0xx_it.o: ..\FreeRTOS\include\deprecated_definitions.h
+oled\stm32g0xx_it.o: ..\FreeRTOS\portable\RVDS\ARM_CM0\portmacro.h
+oled\stm32g0xx_it.o: ..\FreeRTOS\include\mpu_wrappers.h
+oled\stm32g0xx_it.o: ..\FreeRTOS\include\task.h
+oled\stm32g0xx_it.o: ..\FreeRTOS\include\list.h
