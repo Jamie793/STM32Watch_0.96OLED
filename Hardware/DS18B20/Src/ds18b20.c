@@ -30,15 +30,15 @@ void Ds18b20_Init(void)
 
 void Ds18b20_Rest(void)
 {
-    HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin, GPIO_PIN_SET);
     Delay_Us(2);
 
-    HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin, GPIO_PIN_RESET);
     Delay_Us(500);
 
-    HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin, GPIO_PIN_SET);
 
-    if (HAL_GPIO_ReadPin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin) == GPIO_PIN_RESET)
+    if (HAL_GPIO_ReadPin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin) == GPIO_PIN_RESET)
         flag = 1;
     else
         flag = 0;
@@ -48,12 +48,12 @@ void Ds18b20_WriteByte(uint8_t data)
 {
     for (uint8_t i = 0; i < 8; i++)
     {
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin, GPIO_PIN_RESET);
         if ((data >> i) & 0x01)
             Delay_Us(2);
         else
             Delay_Us(30);
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin, GPIO_PIN_SET);
         Delay_Us(60);
     }
 }
@@ -64,11 +64,11 @@ uint8_t Ds18b20_ReadByte(void)
     for (uint8_t i = 0; i < 8; i++)
     {
         data >>= 1;
-        HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin, GPIO_PIN_RESET);
         Delay_Us(2);
-        HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin, GPIO_PIN_SET);
         Delay_Us(10);
-        if (HAL_GPIO_ReadPin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin) == GPIO_PIN_SET)
+        if (HAL_GPIO_ReadPin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin) == GPIO_PIN_SET)
             data |= 0x80;
         Delay_Us(60);
     }
@@ -101,7 +101,7 @@ void Ds18b20_GetTemperture(void)
     HAL_Delay(20);
     Ds18b20_WriteByte(0xCC); // skip rom
     Ds18b20_WriteByte(0x44); // Temperature convert
-    // while (HAL_GPIO_ReadPin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_GPIO_Pin) == GPIO_PIN_RESET);
+    // while (HAL_GPIO_ReadPin(DS18B20_DAT_GPIO_Port, DS18B20_DAT_Pin) == GPIO_PIN_RESET);
 
     HAL_Delay(20);
 

@@ -37,6 +37,7 @@ oled\main.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc.h
 oled\main.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc_ex.h
 oled\main.o: ../Core/Inc/adc.h
 oled\main.o: ../Core/Inc/dma.h
+oled\main.o: ../Core/Inc/rtc.h
 oled\main.o: ../Core/Inc/gpio.h
 oled\main.o: ../Hardware/Joystick/Inc/joystick.h
 oled\main.o: ..\Hardware\UI\Inc\ui.h
@@ -48,4 +49,3 @@ oled\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
 oled\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 oled\main.o: ../Hardware/OLED/Inc/oled.h
 oled\main.o: ..\Hardware\DS18B20\Inc\ds18b20.h
-oled\main.o: ../Core/Inc/rtc.h

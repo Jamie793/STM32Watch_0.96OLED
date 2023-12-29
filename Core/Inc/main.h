@@ -30,7 +30,6 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32g0xx_hal.h"
 
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -54,29 +53,29 @@ extern "C" {
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
-void Delay_Us(unsigned long us);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define DS18B20_DAT_Pin GPIO_PIN_0
+#define DS18B20_DAT_GPIO_Port GPIOA
 #define JOYSTICK_X_Pin GPIO_PIN_1
 #define JOYSTICK_X_GPIO_Port GPIOA
 #define JOYSTICK_Y_Pin GPIO_PIN_2
 #define JOYSTICK_Y_GPIO_Port GPIOA
 #define JOYSTICK_BTN_Pin GPIO_PIN_3
 #define JOYSTICK_BTN_GPIO_Port GPIOA
-
-#define DS18B20_DAT_GPIO_Port GPIOA
-#define DS18B20_DAT_GPIO_Pin GPIO_PIN_0
-
-#define DHT11_GPIO_Port GPIOB
-#define DHT11_GPIO_Pin GPIO_PIN_9
-
+#define DHT11_DAT_Pin GPIO_PIN_9
+#define DHT11_DAT_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 extern char led_str[100];
 extern RTC_TimeTypeDef RTC_Time; 
 extern RTC_DateTypeDef RTC_Date;
+
+
+void Delay_Us(unsigned long i);
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

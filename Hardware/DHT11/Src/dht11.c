@@ -9,16 +9,16 @@ uint8_t DHT11_Integral = 0;
 void DHT11_Start(void)
 {
     // flag = 0;
-    HAL_GPIO_WritePin(DHT11_GPIO_Port, DHT11_GPIO_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(DHT11_DAT_GPIO_Port, DHT11_DAT_Pin, GPIO_PIN_RESET);
     HAL_Delay(20);
-    HAL_GPIO_WritePin(DHT11_GPIO_Port, DHT11_GPIO_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(DHT11_DAT_GPIO_Port, DHT11_DAT_Pin, GPIO_PIN_SET);
     Delay_Us(60);
-    if (HAL_GPIO_ReadPin(DHT11_GPIO_Port, DHT11_GPIO_Pin) == RESET)
+    if (HAL_GPIO_ReadPin(DHT11_DAT_GPIO_Port, DHT11_DAT_Pin) == RESET)
     {
         // flag = 1;
-        while (HAL_GPIO_ReadPin(DHT11_GPIO_Port, DHT11_GPIO_Pin) == RESET)
+        while (HAL_GPIO_ReadPin(DHT11_DAT_GPIO_Port, DHT11_DAT_Pin) == RESET)
             ;
-        while (HAL_GPIO_ReadPin(DHT11_GPIO_Port, DHT11_GPIO_Pin) == SET)
+        while (HAL_GPIO_ReadPin(DHT11_DAT_GPIO_Port, DHT11_DAT_Pin) == SET)
             ;
     }
 }
@@ -29,10 +29,10 @@ uint8_t DHT11_Read(void)
     for (uint8_t i = 0; i < 8; i++)
     {
         data <<= 1;
-        while (HAL_GPIO_ReadPin(DHT11_GPIO_Port, DHT11_GPIO_Pin) == RESET)
+        while (HAL_GPIO_ReadPin(DHT11_DAT_GPIO_Port, DHT11_DAT_Pin) == RESET)
             ;
         Delay_Us(40);
-        if (HAL_GPIO_ReadPin(DHT11_GPIO_Port, DHT11_GPIO_Pin) == SET)
+        if (HAL_GPIO_ReadPin(DHT11_DAT_GPIO_Port, DHT11_DAT_Pin) == SET)
         {
             data |= 0x01;
         }
