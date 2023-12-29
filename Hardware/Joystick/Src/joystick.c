@@ -3,35 +3,35 @@
 uint16_t ADC_VALUE[2];
 Joystick_Event Joystick_GetEvent(void)
 {
-    if (ADC_VALUE[0] < 2800 && ADC_VALUE[1] > 2800 && ADC_VALUE[1] < 3200)
+    if (ADC_VALUE[0] < 2500 && ADC_VALUE[1] > 2500 && ADC_VALUE[1] < 3500)
     {
         return JOYSTICK_EVENT_LEFT;
     }
-    else if (ADC_VALUE[0] > 3200 && ADC_VALUE[1] > 2800 && ADC_VALUE[1] < 3200)
+    else if (ADC_VALUE[0] > 3500 && ADC_VALUE[1] > 2500 && ADC_VALUE[1] < 3500)
     {
         return JOYSTICK_EVENT_RIGHT;
     }
-    else if (ADC_VALUE[1] < 2800 && ADC_VALUE[0] > 2800 && ADC_VALUE[0] < 3200)
+    else if (ADC_VALUE[1] < 2500 && ADC_VALUE[0] > 2500 && ADC_VALUE[0] < 3500)
     {
         return JOYSTICK_EVENT_UP;
     }
-    else if (ADC_VALUE[1] > 3200 && ADC_VALUE[0] > 2800 && ADC_VALUE[0] < 3200)
+    else if (ADC_VALUE[1] > 3500 && ADC_VALUE[0] > 2500 && ADC_VALUE[0] < 3500)
     {
         return JOYSTICK_EVENT_DOWN;
     }
-    else if (ADC_VALUE[0] < 2800 && ADC_VALUE[1] < 2800)
+    else if (ADC_VALUE[0] < 2500 && ADC_VALUE[1] < 2500)
     {
         return JOYSTICK_EVENT_LEFT_UP;
     }
-    else if (ADC_VALUE[0] > 3200 && ADC_VALUE[1] < 2800)
+    else if (ADC_VALUE[0] > 3500 && ADC_VALUE[1] < 2500)
     {
         return JOYSTICK_EVENT_RIGHT_UP;
     }
-    else if (ADC_VALUE[0] < 2800 && ADC_VALUE[1] > 3200)
+    else if (ADC_VALUE[0] < 2500 && ADC_VALUE[1] > 3500)
     {
         return JOYSTICK_EVENT_LEFT_DOWN;
     }
-    else if (ADC_VALUE[0] > 3200 && ADC_VALUE[1] > 3200)
+    else if (ADC_VALUE[0] > 3500 && ADC_VALUE[1] > 3500)
     {
         return JOYSTICK_EVENT_RIGHT_DOWN;
     }
